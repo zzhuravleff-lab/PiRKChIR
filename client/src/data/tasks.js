@@ -42,4 +42,12 @@ export const tasks = [
     priority: 'Средний', 
     dueDate: '29 сентября', 
   }, 
+  { 
+    id: 6, 
+    title: 'Сдать работу по СиАОД', 
+    project: 'Учебный проект', 
+    status: 'Готово', 
+    priority: 'Низкий', 
+    dueDate: '18 сентября', 
+  },
 ];
