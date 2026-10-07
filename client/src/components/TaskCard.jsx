@@ -1,10 +1,9 @@
-function getStatusClass(status) {
-    if (status === 'Готово') return 'status done';
-    if (status === 'В работе') return 'status progress';
-
-    return 'status todo';
-}
-
+function getStatusClass(status) { 
+  if (status === 'Готово') return 'status done'; 
+  if (status === 'В работе') return 'status progress'; 
+  return 'status todo'; 
+} 
+  
 export default function TaskCard({ task }) { 
   return ( 
     <article className="taskCard"> 

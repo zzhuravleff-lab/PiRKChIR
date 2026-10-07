@@ -6,4 +6,4 @@ export default function StatCard({ label, value, note }) {
       <small>{note}</small> 
     </article> 
   ); 
-}
+} 

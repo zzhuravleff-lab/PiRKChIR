@@ -10,7 +10,7 @@ export const tasks = [
   }, 
   { 
     id: 2, 
-    title: 'Найти Мурзика', 
+    title: 'Разобраться с компонентами React', 
     project: 'Обучение', 
     status: 'Нужно сделать', 
     priority: 'Средний', 
@@ -26,20 +26,20 @@ export const tasks = [
   }, 
   { 
     id: 4, 
-    title: 'Проверить мобильную версию', 
+    title: 'Проверить адаптивность сайта', 
     project: 'Интерфейс', 
     status: 'Нужно сделать', 
  
     priority: 'Средний', 
     dueDate: '24 сентября', 
-  },
+  }, 
   { 
     id: 5, 
-    title: 'Выкинуть ноутбук', 
-    project: 'Обучение', 
+    title: 'Выбросить ноутбук', 
+    project: 'Вещи', 
     status: 'Нужно сделать', 
  
     priority: 'Средний', 
-    dueDate: '28 сентября', 
+    dueDate: '29 сентября', 
   }, 
 ];

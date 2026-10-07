@@ -4,7 +4,7 @@ export default function Header() {
       <div> 
         <p className="eyebrow">Учебный проект</p> 
         <h1>Добро пожаловать в TaskFlow</h1> 
-        <p className="subtitle">Здесь будут собраны alls ваши задачи, проекты и 
+        <p className="subtitle">Здесь будут абсолютно все собраны ваши задачи, проекты и 
 прогресс.</p> 
       </div> 
   
@@ -12,5 +12,6 @@ export default function Header() {
         + Новая задача 
       </button> 
     </header> 
-  );
+  ); 
+ 
 }
