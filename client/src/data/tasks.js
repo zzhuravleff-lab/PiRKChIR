@@ -1,4 +1,4 @@
-export const tasks = [ 
+export const initialTasks = [ 
   { 
  
     id: 1, 
@@ -6,7 +6,7 @@ export const tasks = [
     project: 'Учебный проект', 
     status: 'В работе', 
     priority: 'Высокий', 
-    dueDate: '20 сентября', 
+    dueDate: '2026-09-20', 
   }, 
   { 
     id: 2, 
@@ -14,7 +14,7 @@ export const tasks = [
     project: 'Обучение', 
     status: 'Нужно сделать', 
     priority: 'Средний', 
-    dueDate: '22 сентября', 
+    dueDate: '2026-09-22', 
   }, 
   { 
     id: 3, 
@@ -22,7 +22,7 @@ export const tasks = [
     project: 'Учебный проект', 
     status: 'Готово', 
     priority: 'Низкий', 
-    dueDate: '18 сентября', 
+    dueDate: '2026-09-18', 
   }, 
   { 
     id: 4, 
@@ -31,7 +31,7 @@ export const tasks = [
     status: 'Нужно сделать', 
  
     priority: 'Средний', 
-    dueDate: '24 сентября', 
+    dueDate: '2026-09-24', 
   }, 
   { 
     id: 5, 
@@ -40,7 +40,7 @@ export const tasks = [
     status: 'Нужно сделать', 
  
     priority: 'Средний', 
-    dueDate: '29 сентября', 
+    dueDate: '2026-09-29', 
   }, 
   { 
     id: 6, 
@@ -48,6 +48,6 @@ export const tasks = [
     project: 'Учебный проект', 
     status: 'Готово', 
     priority: 'Низкий', 
-    dueDate: '18 сентября', 
+    dueDate: '2026-09-18', 
   },
 ];
