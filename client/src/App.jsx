@@ -18,7 +18,8 @@ export default function App() {
   const [loading, setLoading] = useState(true); 
   const [error, setError] = useState(''); 
   const [search, setSearch] = useState(''); 
-  const [statusFilter, setStatusFilter] = useState('Все'); 
+  const [statusFilter, setStatusFilter] = useState('Все');
+  const [priorityFilter, setPriorityFilter] = useState('Все'); 
   const [isFormOpen, setIsFormOpen] = useState(false); 
   const [editingTask, setEditingTask] = useState(null); 
   
@@ -63,10 +64,12 @@ export default function App() {
       task.project.toLowerCase().includes(normalizedSearch); 
   
     const matchesStatus = 
-      statusFilter === 'Все' || task.status === statusFilter; 
-  
- 
-    return matchesSearch && matchesStatus; 
+      statusFilter === 'Все' || task.status === statusFilter;
+      
+    const matchesPriority =
+      priorityFilter === 'Все' || task.priority === priorityFilter;
+
+  return matchesSearch && matchesStatus && matchesPriority;
   }); 
   
   function openCreateForm() { 
@@ -180,12 +183,16 @@ export default function App() {
                 isFormOpen={isFormOpen} 
                 editingTask={editingTask} 
                 onRetry={reloadTasks} 
-                onSearchChange={setSearch} 
+                onSearchChange={setSearch}
+                priorityFilter={priorityFilter}
+                onPriorityFilterChange={setPriorityFilter}
+                onRefresh={reloadTasks}
  
                 onStatusFilterChange={setStatusFilter} 
-                onResetFilters={() => { 
-                  setSearch(''); 
-                  setStatusFilter('Все'); 
+                onResetFilters={() => {
+                    setSearch('');
+                    setStatusFilter('Все');
+                    setPriorityFilter('Все');
                 }} 
                 onCreateTask={openCreateForm} 
                 onEditTask={openEditForm} 

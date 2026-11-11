@@ -23,6 +23,9 @@ export default function TasksPage({
   onSaveTask, 
   onDeleteTask, 
   onStatusChange, 
+  priorityFilter,
+  onPriorityFilterChange,
+  onRefresh,
  
 }) { 
   if (loading) { 
@@ -38,20 +41,29 @@ export default function TasksPage({
       )} 
   
       <section className="panel"> 
-        <div className="sectionHeading"> 
-          <div> 
-            <p className="eyebrow">Задачи</p> 
-            <h2>Все задачи</h2> 
-          </div> 
+        <div className="sectionHeading">
+            <div>
+                <p className="eyebrow">Задачи</p>
+                <h2>Все задачи</h2>
+            </div>
+            <button
+                className="ghostButton"
+                type="button"
+                onClick={onRefresh}
+            >
+                Обновить
+            </button>
         </div> 
   
-        <TaskToolbar 
-          search={search} 
-          statusFilter={statusFilter} 
-          onSearchChange={onSearchChange} 
-          onStatusFilterChange={onStatusFilterChange} 
-          onResetFilters={onResetFilters} 
-        /> 
+        <TaskToolbar
+            search={search}
+            statusFilter={statusFilter}
+            priorityFilter={priorityFilter}
+            onSearchChange={onSearchChange}
+            onStatusFilterChange={onStatusFilterChange}
+            onPriorityFilterChange={onPriorityFilterChange}
+            onResetFilters={onResetFilters}
+        />
  
   
         <div className="taskList"> 
