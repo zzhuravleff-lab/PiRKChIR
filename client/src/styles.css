@@ -812,3 +812,25 @@ h1 {
     grid-template-columns: 1fr; 
   } 
 }
+
+.showPasswordLabel {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: -8px;
+  font-size: 14px;
+  color: #475467;
+  cursor: pointer;
+}
+
+.profileHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 8px;
+}
+
+.profileHeader .eyebrow {
+  margin: 0;
+}
