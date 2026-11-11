@@ -1,11 +1,16 @@
 import express from 'express';
 import { randomUUID } from 'node:crypto';
 import pool from './db/pool.js';
+import cors from 'cors'; 
 
 const app = express();
 const PORT = 3000;
 
-app.use(express.json());
+app.use(cors({ 
+  origin: 'http://localhost:5173', 
+})); 
+  
+app.use(express.json()); 
 
 const allowedStatuses = ['Нужно сделать', 'В работе', 'Готово'];
 const allowedPriorities = ['Низкий', 'Средний', 'Высокий'];
