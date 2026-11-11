@@ -1,5 +1,9 @@
 import 'dotenv/config'; 
 import { Pool } from 'pg'; 
+
+if (!process.env.SESSION_SECRET) {
+  throw new Error('SESSION_SECRET не задан в .env');
+}
   
 const pool = new Pool({ 
   host: process.env.DB_HOST, 

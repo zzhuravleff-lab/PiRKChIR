@@ -4,11 +4,12 @@ const API_URL = 'http://localhost:3000/api';
 async function request(path, options = {}) { 
   const response = await fetch(`${API_URL}${path}`, { 
     ...options, 
+    credentials: 'include', 
     headers: { 
-      ...(options.body ? { 'Content-Type': 'application/json' } : {}), 
-      ...options.headers, 
+        ...(options.body ? { 'Content-Type': 'application/json' } : {}), 
+        ...options.headers, 
     }, 
-  }); 
+    }); 
   
   if (!response.ok) { 
     const data = await response.json().catch(() => null); 
