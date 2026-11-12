@@ -834,3 +834,47 @@ h1 {
 .profileHeader .eyebrow {
   margin: 0;
 }
+
+@media (max-width: 900px) { 
+.appShell { 
+grid-template-columns: 1fr; 
+} 
+.sidebar { 
+min-height: auto; 
+ 
+  } 
+  
+  .statsGrid { 
+    grid-template-columns: repeat(2, minmax(0, 1fr)); 
+  } 
+} 
+  
+@media (max-width: 560px) { 
+  .content { 
+    padding: 22px 16px; 
+  } 
+  
+  .topbar, 
+  .sectionHeading, 
+  .toolbar, 
+  .formActions { 
+    align-items: stretch; 
+    flex-direction: column; 
+  } 
+  
+  .statsGrid, 
+  .formGrid, 
+  .profileGrid { 
+    grid-template-columns: 1fr; 
+  } 
+  
+  .taskCard { 
+    grid-template-columns: 1fr; 
+ 
+  } 
+  
+  .primaryButton, 
+  .ghostButton { 
+    width: 100%; 
+  } 
+}
