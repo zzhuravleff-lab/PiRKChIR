@@ -60,7 +60,20 @@ describe('TaskFlow API', () => {
   
     expect(response.status).toBe(200); 
     expect(response.body.email).toBe(testEmail); 
-  }); 
+  });
+  
+  // тест из самостоятельной работы
+  test('вход с неверным паролем возвращает 401', async () => {
+    const response = await request(app)
+      .post('/api/auth/login')
+      .send({
+        email: testEmail,
+        password: 'wrong-password',
+      });
+
+    expect(response.status).toBe(401);
+    expect(response.body.message).toBe('Неверный email или пароль');
+  });
  
   
   test('авторизованный пользователь получает задачи', async () => { 
